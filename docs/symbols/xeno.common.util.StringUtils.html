@@ -1,0 +1,1486 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="generator" content="JsDoc Toolkit" />
+		
+		<title>JsDoc Reference - xeno.common.util.StringUtils</title>
+
+		<style type="text/css">
+			/* default.css */
+body
+{
+	font: 12px "Lucida Grande", Tahoma, Arial, Helvetica, sans-serif;
+	width: 800px;
+}
+
+.header
+{
+	clear: both;
+	background-color: #ccc;
+	padding: 8px;
+}
+
+h1
+{
+	font-size: 150%;
+	font-weight: bold;
+	padding: 0;
+	margin: 1em 0 0 .3em;
+}
+
+hr
+{
+	border: none 0;
+	border-top: 1px solid #7F8FB1;
+	height: 1px;
+}
+
+pre.code
+{
+	display: block;
+	padding: 8px;
+	border: 1px dashed #ccc;
+}
+
+#index
+{
+	margin-top: 24px;
+	float: left;
+	width: 160px;
+	position: absolute;
+	left: 8px;
+	background-color: #F3F3F3;
+	padding: 8px;
+}
+
+#content
+{
+	margin-left: 190px;
+	width: 600px;
+}
+
+.classList
+{
+	list-style-type: none;
+	padding: 0;
+	margin: 0 0 0 8px;
+	font-family: arial, sans-serif;
+	font-size: 1em;
+	overflow: auto;
+}
+
+.classList li
+{
+	padding: 0;
+	margin: 0 0 8px 0;
+}
+
+.summaryTable { width: 100%; }
+
+h1.classTitle
+{
+	font-size:170%;
+	line-height:130%;
+}
+
+h2 { font-size: 110%; }
+caption, div.sectionTitle
+{
+	background-color: #7F8FB1;
+	color: #fff;
+	font-size:130%;
+	text-align: left;
+	padding: 2px 6px 2px 6px;
+	border: 1px #7F8FB1 solid;
+}
+
+div.sectionTitle { margin-bottom: 8px; }
+.summaryTable thead { display: none; }
+
+.summaryTable td
+{
+	vertical-align: top;
+	padding: 4px;
+	border-bottom: 1px #7F8FB1 solid;
+	border-right: 1px #7F8FB1 solid;
+}
+
+/*col#summaryAttributes {}*/
+.summaryTable td.attributes
+{
+	border-left: 1px #7F8FB1 solid;
+	width: 140px;
+	text-align: right;
+}
+
+td.attributes, .fixedFont
+{
+	line-height: 15px;
+	color: #002EBE;
+	font-family: "Courier New",Courier,monospace;
+	font-size: 13px;
+}
+
+.summaryTable td.nameDescription
+{
+	text-align: left;
+	font-size: 13px;
+	line-height: 15px;
+}
+
+.summaryTable td.nameDescription, .description
+{
+	line-height: 15px;
+	padding: 4px;
+	padding-left: 4px;
+}
+
+.summaryTable { margin-bottom: 8px; }
+
+ul.inheritsList
+{
+	list-style: square;
+	margin-left: 20px;
+	padding-left: 0;
+}
+
+.detailList {
+	margin-left: 20px; 
+	line-height: 15px;
+}
+.detailList dt { margin-left: 20px; }
+
+.detailList .heading
+{
+	font-weight: bold;
+	padding-bottom: 6px;
+	margin-left: 0;
+}
+
+.light, td.attributes, .light a:link, .light a:visited
+{
+	color: #777;
+	font-style: italic;
+}
+
+.fineprint
+{
+	text-align: right;
+	font-size: 10px;
+}
+		</style>
+	</head>
+
+	<body>
+<!-- ============================== header ================================= -->	
+		<!-- begin static/header.html -->
+		<div id="header">
+</div>
+		<!-- end static/header.html -->
+
+<!-- ============================== classes index ============================ -->
+		<div id="index">
+			<!-- begin publish.classesIndex -->
+			<div align="center"><a href="../index.html">Class Index</a>
+| <a href="../files.html">File Index</a></div>
+<hr />
+<h2>Classes</h2>
+<ul class="classList">
+	
+	<li><i><a href="../symbols/_global_.html">_global_</a></i></li>
+	
+	<li><a href="../symbols/xeno.common.lang.Data.html">xeno.common.lang.Data</a></li>
+	
+	<li><a href="../symbols/xeno.common.lang.EventDispatcher.html">xeno.common.lang.EventDispatcher</a></li>
+	
+	<li><a href="../symbols/xeno.common.lang.GUID.html">xeno.common.lang.GUID</a></li>
+	
+	<li><a href="../symbols/xeno.common.lang.Paging.html">xeno.common.lang.Paging</a></li>
+	
+	<li><a href="../symbols/xeno.common.lang.Timer.html">xeno.common.lang.Timer</a></li>
+	
+	<li><a href="../symbols/xeno.common.lang.URL.html">xeno.common.lang.URL</a></li>
+	
+	<li><a href="../symbols/xeno.common.text.DateFormat.html">xeno.common.text.DateFormat</a></li>
+	
+	<li><a href="../symbols/xeno.common.text.NumberFormat.html">xeno.common.text.NumberFormat</a></li>
+	
+	<li><a href="../symbols/xeno.common.util.ArrayUtils.html">xeno.common.util.ArrayUtils</a></li>
+	
+	<li><a href="../symbols/xeno.common.util.DateUtils.html">xeno.common.util.DateUtils</a></li>
+	
+	<li><a href="../symbols/xeno.common.util.HtmlStringUtils.html">xeno.common.util.HtmlStringUtils</a></li>
+	
+	<li><a href="../symbols/xeno.common.util.NumberUtils.html">xeno.common.util.NumberUtils</a></li>
+	
+	<li><a href="../symbols/xeno.common.util.RandomUtils.html">xeno.common.util.RandomUtils</a></li>
+	
+	<li><a href="../symbols/xeno.common.util.StringUtils.html">xeno.common.util.StringUtils</a></li>
+	
+</ul>
+<hr />
+			<!-- end publish.classesIndex -->
+		</div>
+		
+		<div id="content">
+<!-- ============================== class title ============================ -->
+			<h1 class="classTitle">
+				
+				Class xeno.common.util.StringUtils
+			</h1>
+
+<!-- ============================== class summary ========================== -->			
+			<p class="description">
+				
+				
+			
+				<p>
+A set of utilities for string operations. We have defined some certain words related to the string handling:
+</p>
+<ul>
+	<li>empty: a zero-length string ("")</li>
+	<li>blank: empty or a string is only contains whitespace characters</li>
+</ul>
+<p>
+When you use this class which have return values, a new string instance will be created and return.
+The original string passes in will not be edited.
+</p>
+				
+				
+					<br /><i>Defined in: </i> <a href="../symbols/src/D__Jenkins_Repositories_workspace_xeno-common-javascript_code_target_composes_original_source_050_xeno_common_util_StringUtils.js.html">StringUtils.js</a>.
+				
+			</p>
+
+<!-- ============================== constructor summary ==================== -->			
+			
+			<table class="summaryTable" cellspacing="0" summary="A summary of the constructor documented in the class xeno.common.util.StringUtils.">
+				<caption>Class Summary</caption>
+				<thead>
+					<tr>
+						<th scope="col">Constructor Attributes</th>
+						<th scope="col">Constructor Name and Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="attributes">&nbsp;</td>
+						<td class="nameDescription" >
+							<div class="fixedFont">
+								<b><a href="../symbols/xeno.common.util.StringUtils.html#constructor">xeno.common.util.StringUtils</a></b>()
+							</div>
+							<div class="description"><p>
+The class constructor.</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			
+
+<!-- ============================== properties summary ===================== -->
+			
+
+<!-- ============================== methods summary ======================== -->
+			
+				
+				
+				<table class="summaryTable" cellspacing="0" summary="A summary of the methods documented in the class xeno.common.util.StringUtils.">
+					<caption>Method Summary</caption>
+					<thead>
+						<tr>
+							<th scope="col">Method Attributes</th>
+							<th scope="col">Method Name and Description</th>
+						</tr>
+					</thead>
+					<tbody>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">xeno.common.util.StringUtils.<b><a href="../symbols/xeno.common.util.StringUtils.html#.abbreviate">abbreviate</a></b>(str, length)
+								</div>
+								<div class="description"><p>
+Returns the "str" with content by the length defined, rest will be truncated and be displayed with ".</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">xeno.common.util.StringUtils.<b><a href="../symbols/xeno.common.util.StringUtils.html#.capitalize">capitalize</a></b>(str)
+								</div>
+								<div class="description"><p>
+Capitalizes a string, changing the first letter in the "str" to upper case, no other letters is changed.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">xeno.common.util.StringUtils.<b><a href="../symbols/xeno.common.util.StringUtils.html#.contains">contains</a></b>(str, text)
+								</div>
+								<div class="description"><p>
+Checks whether the "str" contains the "text" or not.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">xeno.common.util.StringUtils.<b><a href="../symbols/xeno.common.util.StringUtils.html#.endsWith">endsWith</a></b>(str, text)
+								</div>
+								<div class="description"><p>
+Determines whether the "str" ends with the specified suffix or not.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">xeno.common.util.StringUtils.<b><a href="../symbols/xeno.common.util.StringUtils.html#.equals">equals</a></b>(left, right)
+								</div>
+								<div class="description"><p>
+Compares two strings whether they have the same value and return the result.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">xeno.common.util.StringUtils.<b><a href="../symbols/xeno.common.util.StringUtils.html#.equalsIgnoreCase">equalsIgnoreCase</a></b>(left, right)
+								</div>
+								<div class="description"><p>
+Please see xeno.common.util.StringUtils.equal, but the comparison is case insensitive.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">xeno.common.util.StringUtils.<b><a href="../symbols/xeno.common.util.StringUtils.html#.isBlank">isBlank</a></b>(str)
+								</div>
+								<div class="description"><p>
+Checks whether the "str" is blank or not.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">xeno.common.util.StringUtils.<b><a href="../symbols/xeno.common.util.StringUtils.html#.isEmpty">isEmpty</a></b>(str)
+								</div>
+								<div class="description"><p>
+Checks whether the "str" is empty or not.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">xeno.common.util.StringUtils.<b><a href="../symbols/xeno.common.util.StringUtils.html#.remove">remove</a></b>(str, text)
+								</div>
+								<div class="description"><p>
+Removes all "text" string in the "str" and returns it with a new string instance.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">xeno.common.util.StringUtils.<b><a href="../symbols/xeno.common.util.StringUtils.html#.removeEnd">removeEnd</a></b>(str, text)
+								</div>
+								<div class="description"><p>
+Removes the "text" string ends in the "str" and returns it with a new string instance.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">xeno.common.util.StringUtils.<b><a href="../symbols/xeno.common.util.StringUtils.html#.removeStart">removeStart</a></b>(str, text)
+								</div>
+								<div class="description"><p>
+Removes the "text" string starts in the "str" and returns it with a new string instance.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">xeno.common.util.StringUtils.<b><a href="../symbols/xeno.common.util.StringUtils.html#.replace">replace</a></b>(str, text, newText)
+								</div>
+								<div class="description"><p>
+Replaces all "text" string in the "str" with the "newText" and return it with a new string instance.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">xeno.common.util.StringUtils.<b><a href="../symbols/xeno.common.util.StringUtils.html#.reverse">reverse</a></b>(str)
+								</div>
+								<div class="description"><p>
+Reverses each character in the "str" and returns it with a new string instance.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">xeno.common.util.StringUtils.<b><a href="../symbols/xeno.common.util.StringUtils.html#.startsWith">startsWith</a></b>(str, text)
+								</div>
+								<div class="description"><p>
+Determines whether the "str" starts with the specified prefix or not.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">xeno.common.util.StringUtils.<b><a href="../symbols/xeno.common.util.StringUtils.html#.trim">trim</a></b>(str)
+								</div>
+								<div class="description"><p>
+Removes empty strings and control characters (char ASCII less than or equals to 32) from both ends of the "str" and return a new string instance.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">xeno.common.util.StringUtils.<b><a href="../symbols/xeno.common.util.StringUtils.html#.uncapitalize">uncapitalize</a></b>(str)
+								</div>
+								<div class="description"><p>
+Uncapitalizes a string, changing the first letter in the "str" to lower case, no other letters is changed.</div>
+							</td>
+						</tr>
+					
+					</tbody>
+				</table>
+				
+				
+				
+			
+<!-- ============================== events summary ======================== -->
+			
+
+<!-- ============================== constructor details ==================== -->		
+			
+			<div class="details"><a name="constructor"> </a>
+				<div class="sectionTitle">
+					Class Detail
+				</div>
+				
+				<div class="fixedFont">
+						<b>xeno.common.util.StringUtils</b>()
+				</div>
+				
+				<div class="description">
+					<p>
+The class constructor.
+</p>
+					
+				</div>
+				
+				
+				
+				
+					
+					
+					
+					
+					
+					
+					
+
+			</div>
+			
+
+<!-- ============================== field details ========================== -->		
+			
+
+<!-- ============================== method details ========================= -->		
+			
+				<div class="sectionTitle">
+					Method Detail
+				</div>
+				
+					<a name=".abbreviate"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">xeno.common.util.StringUtils.</span><b>abbreviate</b>(str, length)
+					
+					</div>
+					<div class="description">
+						<p>
+Returns the "str" with content by the length defined, rest will be truncated and be displayed with "...".
+</p>
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code"><b>Examples</b>
+
+xeno.common.util.StringUtils.abbreviate("", *) = ""
+xeno.common.util.StringUtils.abbreviate("abcd", 0) = "..."
+xeno.common.util.StringUtils.abbreviate("abcd", 2) = "..."
+xeno.common.util.StringUtils.abbreviate("abcd", 3) = "..."
+xeno.common.util.StringUtils.abbreviate("abcd", 4) = "abcd"
+xeno.common.util.StringUtils.abbreviate("abcd", 5) = "abcd"
+xeno.common.util.StringUtils.abbreviate("abcdefg", 5) = "ab..."</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>str</b>
+									
+								</dt>
+								<dd>The string to be abbreviated.</dd>
+							
+								<dt>
+									<b>length</b>
+									
+								</dt>
+								<dd>The length of content to remain, the extended content will be truncated and be displayed with "...".</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>The string.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".capitalize"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">xeno.common.util.StringUtils.</span><b>capitalize</b>(str)
+					
+					</div>
+					<div class="description">
+						<p>
+Capitalizes a string, changing the first letter in the "str" to upper case, no other letters is changed.
+</p>
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code"><b>Examples</b>
+
+xeno.common.util.StringUtils.capitalize("abc") = "Abc"
+xeno.common.util.StringUtils.capitalize("\na") = "\na"
+xeno.common.util.StringUtils.capitalize("a\n") = "A\n"
+xeno.common.util.StringUtils.capitalize("abc def ghi") = "Abc def ghi"
+xeno.common.util.StringUtils.capitalize("\na b\r \tc") = "\na b\r \tc"
+xeno.common.util.StringUtils.capitalize("a\n \rb c\t") = "A\n \rb c\t"</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>str</b>
+									
+								</dt>
+								<dd>The string to be capitalized.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>The string.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".contains"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">xeno.common.util.StringUtils.</span><b>contains</b>(str, text)
+					
+					</div>
+					<div class="description">
+						<p>
+Checks whether the "str" contains the "text" or not.
+</p>
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code"><b>Examples</b>
+
+xeno.common.util.StringUtils.contains("", "a") = false
+xeno.common.util.StringUtils.contains("maya", "a") = true
+xeno.common.util.StringUtils.contains("maya", "ay") = true
+xeno.common.util.StringUtils.contains("maya", "aa") = false
+xeno.common.util.StringUtils.contains("maya", "") = true
+xeno.common.util.StringUtils.contains("", "") = true
+xeno.common.util.StringUtils.contains("m y ", " ") = true
+xeno.common.util.StringUtils.contains("ma\nya\na", "\n") = true
+xeno.common.util.StringUtils.contains("ma\nya\na", "a\n") = true</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>str</b>
+									
+								</dt>
+								<dd>The string to be checked.</dd>
+							
+								<dt>
+									<b>text</b>
+									
+								</dt>
+								<dd>The element of the string to be found.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>The boolean.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".endsWith"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">xeno.common.util.StringUtils.</span><b>endsWith</b>(str, text)
+					
+					</div>
+					<div class="description">
+						<p>
+Determines whether the "str" ends with the specified suffix or not.
+</p>
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code"><b>Examples</b>
+
+xeno.common.util.StringUtils.endsWith("", "") = true
+xeno.common.util.StringUtils.endsWith("abc", "c") = true
+xeno.common.util.StringUtils.endsWith("abc", "") = true
+xeno.common.util.StringUtils.endsWith("abc", "bc") = true
+xeno.common.util.StringUtils.endsWith("abc", "b") = false
+xeno.common.util.StringUtils.endsWith("abc\n", "\n") = true</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>str</b>
+									
+								</dt>
+								<dd>The string to be checked.</dd>
+							
+								<dt>
+									<b>text</b>
+									
+								</dt>
+								<dd>The element of the string to be found.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>The boolean.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".equals"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">xeno.common.util.StringUtils.</span><b>equals</b>(left, right)
+					
+					</div>
+					<div class="description">
+						<p>
+Compares two strings whether they have the same value and return the result.
+</p>
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code"><b>Examples</b>
+
+xeno.common.util.StringUtils.equals("", "") = true
+xeno.common.util.StringUtils.equals("", " ") = false
+xeno.common.util.StringUtils.equals("a", "a") = true
+xeno.common.util.StringUtils.equals("a", "A") = false
+xeno.common.util.StringUtils.equals("ab", "ab") = true
+xeno.common.util.StringUtils.equals("ab", "Ab") = false
+xeno.common.util.StringUtils.equals("ab", "ac") = false</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>left</b>
+									
+								</dt>
+								<dd>The left string to be compared.</dd>
+							
+								<dt>
+									<b>right</b>
+									
+								</dt>
+								<dd>The right string to be compared.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>The boolean.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".equalsIgnoreCase"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">xeno.common.util.StringUtils.</span><b>equalsIgnoreCase</b>(left, right)
+					
+					</div>
+					<div class="description">
+						<p>
+Please see xeno.common.util.StringUtils.equal, but the comparison is case insensitive.
+</p>
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code"><b>Examples</b>
+
+xeno.common.util.StringUtils.equalsIgnoreCase("", "") = true
+xeno.common.util.StringUtils.equalsIgnoreCase("", " ") = false
+xeno.common.util.StringUtils.equalsIgnoreCase("a", "a") = true
+xeno.common.util.StringUtils.equalsIgnoreCase("a", "A") = true
+xeno.common.util.StringUtils.equalsIgnoreCase("ab", "ab") = true
+xeno.common.util.StringUtils.equalsIgnoreCase("ab", "Ab") = true
+xeno.common.util.StringUtils.equalsIgnoreCase("ab", "ac") = false</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>left</b>
+									
+								</dt>
+								<dd>The left string to be compared.</dd>
+							
+								<dt>
+									<b>right</b>
+									
+								</dt>
+								<dd>The right string to be compared.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>The boolean.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".isBlank"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">xeno.common.util.StringUtils.</span><b>isBlank</b>(str)
+					
+					</div>
+					<div class="description">
+						<p>
+Checks whether the "str" is blank or not.
+</p>
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code"><b>Examples</b>
+
+xeno.common.util.StringUtils.isBlank("") = true
+xeno.common.util.StringUtils.isBlank(" ") = true
+xeno.common.util.StringUtils.isBlank("aBc") = false
+xeno.common.util.StringUtils.isBlank("\n") = true
+xeno.common.util.StringUtils.isBlank("\n\n") = true
+xeno.common.util.StringUtils.isBlank("\na\n") = false</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>str</b>
+									
+								</dt>
+								<dd>The string to be checked.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>The boolean.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".isEmpty"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">xeno.common.util.StringUtils.</span><b>isEmpty</b>(str)
+					
+					</div>
+					<div class="description">
+						<p>
+Checks whether the "str" is empty or not.
+</p>
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code"><b>Examples</b>
+
+xeno.common.util.StringUtils.isEmpty("") = true
+xeno.common.util.StringUtils.isEmpty(" ") = false
+xeno.common.util.StringUtils.isEmpty("aBc") = false
+xeno.common.util.StringUtils.isEmpty("\n") = false
+xeno.common.util.StringUtils.isEmpty("\n\n") = false
+xeno.common.util.StringUtils.isEmpty("\na\n") = false</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>str</b>
+									
+								</dt>
+								<dd>The string to be checked.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>The boolean.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".remove"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">xeno.common.util.StringUtils.</span><b>remove</b>(str, text)
+					
+					</div>
+					<div class="description">
+						<p>
+Removes all "text" string in the "str" and returns it with a new string instance.
+</p>
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code"><b>Examples</b>
+
+xeno.common.util.StringUtils.remove("maya", "a") = "my"
+xeno.common.util.StringUtils.remove("maya", "") = "maya"
+xeno.common.util.StringUtils.remove("maya", "ay") = "ma"
+xeno.common.util.StringUtils.remove("ma\na", "\n") = "maa"</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>str</b>
+									
+								</dt>
+								<dd>The string to be handled.</dd>
+							
+								<dt>
+									<b>text</b>
+									
+								</dt>
+								<dd>The element of the string to be removed.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>The string.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".removeEnd"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">xeno.common.util.StringUtils.</span><b>removeEnd</b>(str, text)
+					
+					</div>
+					<div class="description">
+						<p>
+Removes the "text" string ends in the "str" and returns it with a new string instance.
+</p>
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code"><b>Examples</b>
+
+xeno.common.util.StringUtils.removeEnd("maya", "") = "maya"
+xeno.common.util.StringUtils.removeEnd("maya", "a") = "maya"
+xeno.common.util.StringUtils.removeEnd("mayamaya", "a") = "mayamay"
+xeno.common.util.StringUtils.removeEnd("mayamaya", "ya") = "mayama"
+xeno.common.util.StringUtils.removeEnd("mayamaya", "ay") = "mayamaya"
+xeno.common.util.StringUtils.removeEnd("\nmaya\n", "\n") = "\nmaya"</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>str</b>
+									
+								</dt>
+								<dd>The string to be handled.</dd>
+							
+								<dt>
+									<b>text</b>
+									
+								</dt>
+								<dd>The element of the string to be removed.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>The string.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".removeStart"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">xeno.common.util.StringUtils.</span><b>removeStart</b>(str, text)
+					
+					</div>
+					<div class="description">
+						<p>
+Removes the "text" string starts in the "str" and returns it with a new string instance.
+</p>
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code"><b>Examples</b>
+
+xeno.common.util.StringUtils.removeStart("maya", "") = "maya"
+xeno.common.util.StringUtils.removeStart("maya", "a") = "maya"
+xeno.common.util.StringUtils.removeStart("mayamaya", "m") = "ayamaya"
+xeno.common.util.StringUtils.removeStart("mayamaya", "ma") = "yamaya"
+xeno.common.util.StringUtils.removeStart("mayamaya", "ya") = "mayamaya"
+xeno.common.util.StringUtils.removeStart("\nmaya\n", "\n") = "maya\n"</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>str</b>
+									
+								</dt>
+								<dd>The string to be handled.</dd>
+							
+								<dt>
+									<b>text</b>
+									
+								</dt>
+								<dd>The element of the string to be removed.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>The string.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".replace"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">xeno.common.util.StringUtils.</span><b>replace</b>(str, text, newText)
+					
+					</div>
+					<div class="description">
+						<p>
+Replaces all "text" string in the "str" with the "newText" and return it with a new string instance.
+</p>
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code"><b>Examples</b>
+
+xeno.common.util.StringUtils.replace("maya", "a", "b") = "mbyb"
+xeno.common.util.StringUtils.replace("maya", "", "b") = "maya"
+xeno.common.util.StringUtils.replace("maya", "a", "") = "my"
+xeno.common.util.StringUtils.replace("maya", "ay", "c") = "mca"
+xeno.common.util.StringUtils.replace("maya", "a", "cd") = "mcdycd"
+xeno.common.util.StringUtils.replace("maya", "ay", "cd") = "mcda"</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>str</b>
+									
+								</dt>
+								<dd>The string to be handled.</dd>
+							
+								<dt>
+									<b>text</b>
+									
+								</dt>
+								<dd>The element of the string to be replaced.</dd>
+							
+								<dt>
+									<b>newText</b>
+									
+								</dt>
+								<dd>The replacement string.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>The string.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".reverse"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">xeno.common.util.StringUtils.</span><b>reverse</b>(str)
+					
+					</div>
+					<div class="description">
+						<p>
+Reverses each character in the "str" and returns it with a new string instance.
+</p>
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code"><b>Examples</b>
+
+xeno.common.util.StringUtils.reverse("bat") = "tab"
+xeno.common.util.StringUtils.reverse(" ba\nt") = "t\nab "</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>str</b>
+									
+								</dt>
+								<dd>The string to be reversed.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>The string.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".startsWith"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">xeno.common.util.StringUtils.</span><b>startsWith</b>(str, text)
+					
+					</div>
+					<div class="description">
+						<p>
+Determines whether the "str" starts with the specified prefix or not.
+</p>
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code"><b>Examples</b>
+
+xeno.common.util.StringUtils.startsWith("", "") = true
+xeno.common.util.StringUtils.startsWith("abc", "a") = true
+xeno.common.util.StringUtils.startsWith("abc", "") = true
+xeno.common.util.StringUtils.startsWith("abc", "ab") = true
+xeno.common.util.StringUtils.startsWith("abc", "b") = false
+xeno.common.util.StringUtils.startsWith("\nabc", "\n") = true</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>str</b>
+									
+								</dt>
+								<dd>The string to be checked.</dd>
+							
+								<dt>
+									<b>text</b>
+									
+								</dt>
+								<dd>The element of the string to be found.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>The boolean.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".trim"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">xeno.common.util.StringUtils.</span><b>trim</b>(str)
+					
+					</div>
+					<div class="description">
+						<p>
+Removes empty strings and control characters (char ASCII less than or equals to 32) from both ends of the "str" and return a new string instance.
+</p>
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code"><b>Examples</b>
+
+xeno.common.util.StringUtils.trim("") = ""
+xeno.common.util.StringUtils.trim(" ") = ""
+xeno.common.util.StringUtils.trim(" aBc ") = "aBc"
+xeno.common.util.StringUtils.trim(" a c ") = "a c"
+xeno.common.util.StringUtils.trim("\n") = ""
+xeno.common.util.StringUtils.trim("\n\n") = ""
+xeno.common.util.StringUtils.trim("\na\n") = "a"</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>str</b>
+									
+								</dt>
+								<dd>The string to be trimmed.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>The string.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".uncapitalize"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">xeno.common.util.StringUtils.</span><b>uncapitalize</b>(str)
+					
+					</div>
+					<div class="description">
+						<p>
+Uncapitalizes a string, changing the first letter in the "str" to lower case, no other letters is changed.
+</p>
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code"><b>Examples</b>
+
+xeno.common.util.StringUtils.uncapitalize("Abc") = "abc"
+xeno.common.util.StringUtils.uncapitalize("\nA") = "\nA"
+xeno.common.util.StringUtils.uncapitalize("A\n") = "a\n"
+xeno.common.util.StringUtils.uncapitalize("ABC DEF GHI") = "aBC DEF GHI"
+xeno.common.util.StringUtils.uncapitalize("\nA B\r \tC") = "\nA B\r \tC"
+xeno.common.util.StringUtils.uncapitalize("A\n \rB C\t") = "a\n \rB C\t"</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>str</b>
+									
+								</dt>
+								<dd>The string to be uncapitalized.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>The string.</dd>
+							
+							</dl>
+						
+						
+						
+
+					
+				
+			
+			
+<!-- ============================== event details ========================= -->		
+			
+			
+			<hr />
+		</div>
+
+		
+<!-- ============================== footer ================================= -->
+		<div class="fineprint" style="clear:both">
+			
+			Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.3.2 on Tue May 16 2017 13:04:47 GMT+0800 (CST)
+		</div>
+	</body>
+</html>
