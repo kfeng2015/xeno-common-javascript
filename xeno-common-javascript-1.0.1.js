@@ -1207,7 +1207,7 @@ xeno.common.text.NumberFormat = function(pattern) {
  * </p>
  * <p>
  * When you use this class for some certain functions which have return values, a new array instance will be created and return.
- * The original array passes in will not be edited, but elements references in the new array will be the same as their in the original array.
+ * The original array passes in will not be edited, but items references in the new array will be the same as their in the original array.
  * </p>
  * 
  * @description
@@ -1789,6 +1789,583 @@ xeno.common.util.NumberUtils = (function () {
 			}
 
 			return false;
+		}
+
+	};
+
+})();
+
+/**
+ * @class
+ * <p>
+ * A set of utilities for object array operations.
+ * </p>
+ * <p>
+ * When you use this class for some certain functions which have return values, a new array instance will be created and return.
+ * The original array passes in will not be edited, but items references in the new array will be the same as their in the original array.
+ * </p>
+ * 
+ * @description
+ * <p>
+ * The class constructor.
+ * </p>
+ */
+xeno.common.util.ObjectArrayUtils = (function () {
+	var Data = null;
+	var NumberUtils = null;
+	var ObjectArrayUtils = null;
+
+	xeno.common.onCompleteCallbacks.push(function() {
+		Data = xeno.common.lang.Data;
+		NumberUtils = xeno.common.util.NumberUtils;
+		ObjectArrayUtils = xeno.common.util.ObjectArrayUtils;
+	});
+
+	return {
+
+		/**
+		 * @description
+		 * <p>
+		 * Returns the first index of given array by its item property and value.
+		 * </p>
+		 * 
+		 * @example
+		 * <b>Examples</b>
+		 * 
+		 * Assumes the "o1" is: { id: 1, name: "eric" }
+		 * Assumes the "o2" is: { flag: true }
+		 * Assumes the "o3" is: { id: 3, name: "mary" }
+		 * Assumes the "o4" is: { id: 4, name: "jack" }
+		 * Assumes the "o5" is: { id: 5, name: "jack" }
+		 * Assumes the "o6" is: { id: 6, name: "mary" }
+		 * Assumes the "o7" is: { id: 7, name: "tina" }
+		 * Assumes the "o8" is: { }
+		 * Assumes the "o9" is: { id: 9, name: "jeff" }
+		 * Assumes the "arr" is: [o1, null, null, o2, o3, o4, undefined, o5, o6, o7, undefined, o8, o9]
+		 * 
+		 * xeno.common.util.ObjectArrayUtils.indexOf(arr, "id", 3) = 4
+		 * xeno.common.util.ObjectArrayUtils.indexOf(arr, "id", 0) = -1
+		 * xeno.common.util.ObjectArrayUtils.indexOf(arr, "id", 7) = 9
+		 * xeno.common.util.ObjectArrayUtils.indexOf(arr, "id", 10) = -1
+		 * xeno.common.util.ObjectArrayUtils.indexOf(arr, "name", "jack") = 5
+		 * xeno.common.util.ObjectArrayUtils.indexOf(arr, "name", "jane") = -1
+		 * xeno.common.util.ObjectArrayUtils.indexOf(arr, "id", 3, -3) = 4
+		 * xeno.common.util.ObjectArrayUtils.indexOf(arr, "id", 0, -3) = -3
+		 * xeno.common.util.ObjectArrayUtils.indexOf(arr, "id", 7, -3) = 9
+		 * xeno.common.util.ObjectArrayUtils.indexOf(arr, "id", 10, -3) = -3
+		 * xeno.common.util.ObjectArrayUtils.indexOf(arr, "name", "jack", -3) = 5
+		 * xeno.common.util.ObjectArrayUtils.indexOf(arr, "name", "jane", -3) = -3
+		 * xeno.common.util.ObjectArrayUtils.indexOf(arr, "id", 3, 10) = 4
+		 * xeno.common.util.ObjectArrayUtils.indexOf(arr, "id", 0, 10) = 10
+		 * xeno.common.util.ObjectArrayUtils.indexOf(arr, "id", 7, 10) = 9
+		 * xeno.common.util.ObjectArrayUtils.indexOf(arr, "id", 10, 10) = 10
+		 * xeno.common.util.ObjectArrayUtils.indexOf(arr, "name", "jack", 10) = 5
+		 * xeno.common.util.ObjectArrayUtils.indexOf(arr, "name", "jane", 10) = 10
+		 * 
+		 * @param arr
+		 * 			The array to be handled.
+		 * @param prop
+		 * 			The object item property.
+		 * @param value
+		 * 			The object item value.
+		 * @param defaultIndex
+		 * 			The default index to return if the first index does not find, optional.<br/>
+		 * 			The default value is: -1.
+		 * 
+		 * @return
+		 * 			The integer.
+		 */
+		indexOf: function(arr, prop, value, defaultIndex) {
+			xc_global_ensure(arguments.length > 0, "Missing required argument 'arr', index: 0");
+			xc_global_ensure(arguments.length > 1, "Missing required argument 'prop', index: 1");
+			xc_global_ensure(arguments.length > 2, "Missing required argument 'value', index: 2");
+			xc_global_ensure(Data.isArray(arr), "The argument 'arr' is not an array");
+			xc_global_ensure(Data.isString(prop), "The argument 'prop' is not a string");
+
+			var result = -1;
+
+			if(arguments.length > 3) {
+				xc_global_ensure(NumberUtils.isInt(defaultIndex), "The argument 'defaultIndex' is not an integer number");
+
+				result = defaultIndex;
+			}
+
+			var index = arr.length - 1;
+
+			for(var i = 0; i <= index; i += 1) {
+
+				try {
+					var item = arr[i];
+
+					if(item.hasOwnProperty(prop)) {
+
+						if(item[prop] === value) {
+							result = i;
+
+							break;
+						}
+					}
+
+				} catch(err) {
+					// Does nothing.
+				}
+			}
+
+			return result;
+		},
+
+		/**
+		 * @description
+		 * <p>
+		 * Returns the last index of given array by its item property and value.
+		 * </p>
+		 * 
+		 * @example
+		 * <b>Examples</b>
+		 * 
+		 * Assumes the "o1" is: { id: 1, name: "eric" }
+		 * Assumes the "o2" is: { flag: true }
+		 * Assumes the "o3" is: { id: 3, name: "mary" }
+		 * Assumes the "o4" is: { id: 4, name: "jack" }
+		 * Assumes the "o5" is: { id: 5, name: "jack" }
+		 * Assumes the "o6" is: { id: 6, name: "mary" }
+		 * Assumes the "o7" is: { id: 7, name: "tina" }
+		 * Assumes the "o8" is: { }
+		 * Assumes the "o9" is: { id: 9, name: "jeff" }
+		 * Assumes the "arr" is: [o1, null, null, o2, o3, o4, undefined, o5, o6, o7, undefined, o8, o9]
+		 * 
+		 * xeno.common.util.ObjectArrayUtils.lastIndexOf(arr, "id", 3) = 4
+		 * xeno.common.util.ObjectArrayUtils.lastIndexOf(arr, "id", 0) = -1
+		 * xeno.common.util.ObjectArrayUtils.lastIndexOf(arr, "id", 7) = 9
+		 * xeno.common.util.ObjectArrayUtils.lastIndexOf(arr, "id", 10) = -1
+		 * xeno.common.util.ObjectArrayUtils.lastIndexOf(arr, "name", "jack") = 7
+		 * xeno.common.util.ObjectArrayUtils.lastIndexOf(arr, "name", "jane") = -1
+		 * xeno.common.util.ObjectArrayUtils.lastIndexOf(arr, "id", 3, -3) = 4
+		 * xeno.common.util.ObjectArrayUtils.lastIndexOf(arr, "id", 0, -3) = -3
+		 * xeno.common.util.ObjectArrayUtils.lastIndexOf(arr, "id", 7, -3) = 9
+		 * xeno.common.util.ObjectArrayUtils.lastIndexOf(arr, "id", 10, -3) = -3
+		 * xeno.common.util.ObjectArrayUtils.lastIndexOf(arr, "name", "jack", -3) = 7
+		 * xeno.common.util.ObjectArrayUtils.lastIndexOf(arr, "name", "jane", -3) = -3
+		 * xeno.common.util.ObjectArrayUtils.lastIndexOf(arr, "id", 3, 10) = 4
+		 * xeno.common.util.ObjectArrayUtils.lastIndexOf(arr, "id", 0, 10) = 10
+		 * xeno.common.util.ObjectArrayUtils.lastIndexOf(arr, "id", 7, 10) = 9
+		 * xeno.common.util.ObjectArrayUtils.lastIndexOf(arr, "id", 10, 10) = 10
+		 * xeno.common.util.ObjectArrayUtils.lastIndexOf(arr, "name", "jack", 10) = 7
+		 * xeno.common.util.ObjectArrayUtils.lastIndexOf(arr, "name", "jane", 10) = 10
+		 * 
+		 * @param arr
+		 * 			The array to be handled.
+		 * @param prop
+		 * 			The object item property.
+		 * @param value
+		 * 			The object item value.
+		 * @param defaultIndex
+		 * 			The default index to return if the last index does not find, optional.<br/>
+		 * 			The default value is: -1.
+		 * 
+		 * @return
+		 * 			The integer.
+		 */
+		lastIndexOf: function(arr, prop, value, defaultIndex) {
+			xc_global_ensure(arguments.length > 0, "Missing required argument 'arr', index: 0");
+			xc_global_ensure(arguments.length > 1, "Missing required argument 'prop', index: 1");
+			xc_global_ensure(arguments.length > 2, "Missing required argument 'value', index: 2");
+			xc_global_ensure(Data.isArray(arr), "The argument 'arr' is not an array");
+			xc_global_ensure(Data.isString(prop), "The argument 'prop' is not a string");
+
+			var result = -1;
+
+			if(arguments.length > 3) {
+				xc_global_ensure(NumberUtils.isInt(defaultIndex), "The argument 'defaultIndex' is not an integer number");
+
+				result = defaultIndex;
+			}
+
+			var index = arr.length - 1;
+
+			for(var i = index; i >= 0; i -= 1) {
+
+				try {
+					var item = arr[i];
+
+					if(item.hasOwnProperty(prop)) {
+
+						if(item[prop] === value) {
+							result = i;
+
+							break;
+						}
+					}
+
+				} catch(err) {
+					// Does nothing.
+				}
+			}
+
+			return result;
+		},
+
+		/**
+		 * @description
+		 * <p>
+		 * Returns the first item of given array by its item property and value.
+		 * </p>
+		 * 
+		 * @example
+		 * <b>Examples</b>
+		 * 
+		 * Assumes the "o0" is: { id: 0, name: "mark" }
+		 * Assumes the "o1" is: { id: 1, name: "eric" }
+		 * Assumes the "o2" is: { flag: true }
+		 * Assumes the "o3" is: { id: 3, name: "mary" }
+		 * Assumes the "o4" is: { id: 4, name: "jack" }
+		 * Assumes the "o5" is: { id: 5, name: "jack" }
+		 * Assumes the "o6" is: { id: 6, name: "mary" }
+		 * Assumes the "o7" is: { id: 7, name: "tina" }
+		 * Assumes the "o8" is: { }
+		 * Assumes the "o9" is: { id: 9, name: "jeff" }
+		 * Assumes the "arr" is: [o1, null, null, o2, o3, o4, undefined, o5, o6, o7, undefined, o8, o9]
+		 * 
+		 * xeno.common.util.ObjectArrayUtils.itemOf(arr, "id", 3) = o3
+		 * xeno.common.util.ObjectArrayUtils.itemOf(arr, "id", 0) = null
+		 * xeno.common.util.ObjectArrayUtils.itemOf(arr, "id", 7) = o7
+		 * xeno.common.util.ObjectArrayUtils.itemOf(arr, "id", 10) = null
+		 * xeno.common.util.ObjectArrayUtils.itemOf(arr, "name", "jack") = o4
+		 * xeno.common.util.ObjectArrayUtils.itemOf(arr, "name", "jane") = null
+		 * xeno.common.util.ObjectArrayUtils.itemOf(arr, "id", 3, -3) = o3
+		 * xeno.common.util.ObjectArrayUtils.itemOf(arr, "id", 0, -3) = -3
+		 * xeno.common.util.ObjectArrayUtils.itemOf(arr, "id", 7, -3) = o7
+		 * xeno.common.util.ObjectArrayUtils.itemOf(arr, "id", 10, -3) = -3
+		 * xeno.common.util.ObjectArrayUtils.itemOf(arr, "name", "jack", -3) = o4
+		 * xeno.common.util.ObjectArrayUtils.itemOf(arr, "name", "jane", -3) = -3
+		 * xeno.common.util.ObjectArrayUtils.itemOf(arr, "id", 3, o0) = o3
+		 * xeno.common.util.ObjectArrayUtils.itemOf(arr, "id", 0, o0) = o0
+		 * xeno.common.util.ObjectArrayUtils.itemOf(arr, "id", 7, o0) = o7
+		 * xeno.common.util.ObjectArrayUtils.itemOf(arr, "id", 10, o0) = o0
+		 * xeno.common.util.ObjectArrayUtils.itemOf(arr, "name", "jack", o0) = o4
+		 * xeno.common.util.ObjectArrayUtils.itemOf(arr, "name", "jane", o0) = o0
+		 * 
+		 * @param arr
+		 * 			The array to be handled.
+		 * @param prop
+		 * 			The object item property.
+		 * @param value
+		 * 			The object item value.
+		 * @param defaultItem
+		 * 			The default item to return if the first item does not find, optional.<br/>
+		 * 			The default value is: null.
+		 * 
+		 * 
+		 * @return
+		 * 			The object.
+		 */
+		itemOf: function(arr, prop, value, defaultItem) {
+			xc_global_ensure(arguments.length > 0, "Missing required argument 'arr', index: 0");
+			xc_global_ensure(arguments.length > 1, "Missing required argument 'prop', index: 1");
+			xc_global_ensure(arguments.length > 2, "Missing required argument 'value', index: 2");
+			xc_global_ensure(Data.isArray(arr), "The argument 'arr' is not an array");
+			xc_global_ensure(Data.isString(prop), "The argument 'prop' is not a string");
+
+			var result = null;
+
+			if(arguments.length > 3) {
+				result = defaultItem;
+			}
+
+			var index = arr.length - 1;
+
+			for(var i = 0; i <= index; i += 1) {
+
+				try {
+					var item = arr[i];
+
+					if(item.hasOwnProperty(prop)) {
+
+						if(item[prop] === value) {
+							result = item;
+
+							break;
+						}
+					}
+
+				} catch(err) {
+					// Does nothing.
+				}
+			}
+
+			return result;
+		},
+
+		/**
+		 * @description
+		 * <p>
+		 * Returns the last item of given array by its item property and value.
+		 * </p>
+		 * 
+		 * @example
+		 * <b>Examples</b>
+		 * 
+		 * Assumes the "o0" is: { id: 0, name: "mark" }
+		 * Assumes the "o1" is: { id: 1, name: "eric" }
+		 * Assumes the "o2" is: { flag: true }
+		 * Assumes the "o3" is: { id: 3, name: "mary" }
+		 * Assumes the "o4" is: { id: 4, name: "jack" }
+		 * Assumes the "o5" is: { id: 5, name: "jack" }
+		 * Assumes the "o6" is: { id: 6, name: "mary" }
+		 * Assumes the "o7" is: { id: 7, name: "tina" }
+		 * Assumes the "o8" is: { }
+		 * Assumes the "o9" is: { id: 9, name: "jeff" }
+		 * Assumes the "arr" is: [o1, null, null, o2, o3, o4, undefined, o5, o6, o7, undefined, o8, o9]
+		 * 
+		 * xeno.common.util.ObjectArrayUtils.lastItemOf(arr, "id", 3) = o3
+		 * xeno.common.util.ObjectArrayUtils.lastItemOf(arr, "id", 0) = null
+		 * xeno.common.util.ObjectArrayUtils.lastItemOf(arr, "id", 7) = o7
+		 * xeno.common.util.ObjectArrayUtils.lastItemOf(arr, "id", 10) = null
+		 * xeno.common.util.ObjectArrayUtils.lastItemOf(arr, "name", "jack") = o5
+		 * xeno.common.util.ObjectArrayUtils.lastItemOf(arr, "name", "jane") = null
+		 * xeno.common.util.ObjectArrayUtils.lastItemOf(arr, "id", 3, -3) = o3
+		 * xeno.common.util.ObjectArrayUtils.lastItemOf(arr, "id", 0, -3) = -3
+		 * xeno.common.util.ObjectArrayUtils.lastItemOf(arr, "id", 7, -3) = o7
+		 * xeno.common.util.ObjectArrayUtils.lastItemOf(arr, "id", 10, -3) = -3
+		 * xeno.common.util.ObjectArrayUtils.lastItemOf(arr, "name", "jack", -3) = o5
+		 * xeno.common.util.ObjectArrayUtils.lastItemOf(arr, "name", "jane", -3) = -3
+		 * xeno.common.util.ObjectArrayUtils.lastItemOf(arr, "id", 3, o0) = o3
+		 * xeno.common.util.ObjectArrayUtils.lastItemOf(arr, "id", 0, o0) = o0
+		 * xeno.common.util.ObjectArrayUtils.lastItemOf(arr, "id", 7, o0) = o7
+		 * xeno.common.util.ObjectArrayUtils.lastItemOf(arr, "id", 10, o0) = o0
+		 * xeno.common.util.ObjectArrayUtils.lastItemOf(arr, "name", "jack", o0) = o5
+		 * xeno.common.util.ObjectArrayUtils.lastItemOf(arr, "name", "jane", o0) = o0
+		 * 
+		 * @param arr
+		 * 			The array to be handled.
+		 * @param prop
+		 * 			The object item property.
+		 * @param value
+		 * 			The object item value.
+		 * @param defaultItem
+		 * 			The default item to return if the last item does not find, optional.<br/>
+		 * 			The default value is: null.
+		 * 
+		 * @return
+		 * 			The object.
+		 */
+		lastItemOf: function(arr, prop, value, defaultItem) {
+			xc_global_ensure(arguments.length > 0, "Missing required argument 'arr', index: 0");
+			xc_global_ensure(arguments.length > 1, "Missing required argument 'prop', index: 1");
+			xc_global_ensure(arguments.length > 2, "Missing required argument 'value', index: 2");
+			xc_global_ensure(Data.isArray(arr), "The argument 'arr' is not an array");
+			xc_global_ensure(Data.isString(prop), "The argument 'prop' is not a string");
+
+			var result = null;
+
+			if(arguments.length > 3) {
+				result = defaultItem;
+			}
+
+			var index = arr.length - 1;
+
+			for(var i = index; i >= 0; i -= 1) {
+
+				try {
+					var item = arr[i];
+
+					if(item.hasOwnProperty(prop)) {
+
+						if(item[prop] === value) {
+							result = item;
+
+							break;
+						}
+					}
+
+				} catch(err) {
+					// Does nothing.
+				}
+			}
+
+			return result;
+		},
+
+		/**
+		 * @description
+		 * <p>
+		 * Checks item exist or not of given array by its item property and value.
+		 * </p>
+		 * 
+		 * @example
+		 * <b>Examples</b>
+		 * 
+		 * Assumes the "o1" is: { id: 1, name: "eric" }
+		 * Assumes the "o2" is: { flag: true }
+		 * Assumes the "o3" is: { id: 3, name: "mary" }
+		 * Assumes the "o4" is: { id: 4, name: "jack" }
+		 * Assumes the "o5" is: { id: 5, name: "jack" }
+		 * Assumes the "o6" is: { id: 6, name: "mary" }
+		 * Assumes the "o7" is: { id: 7, name: "tina" }
+		 * Assumes the "o8" is: { }
+		 * Assumes the "o9" is: { id: 9, name: "jeff" }
+		 * Assumes the "arr" is: [o1, null, null, o2, o3, o4, undefined, o5, o6, o7, undefined, o8, o9]
+		 * 
+		 * xeno.common.util.ObjectArrayUtils.contains(arr, "id", 3) = true
+		 * xeno.common.util.ObjectArrayUtils.contains(arr, "id", 0) = false
+		 * xeno.common.util.ObjectArrayUtils.contains(arr, "id", 7) = true
+		 * xeno.common.util.ObjectArrayUtils.contains(arr, "id", 10) = false
+		 * xeno.common.util.ObjectArrayUtils.contains(arr, "name", "jack") = true
+		 * xeno.common.util.ObjectArrayUtils.contains(arr, "name", "jane") = false
+		 * 
+		 * @param arr
+		 * 			The array to be handled.
+		 * @param prop
+		 * 			The object item property.
+		 * @param value
+		 * 			The object item value.
+		 * 
+		 * @return
+		 * 			The boolean.
+		 */
+		contains: function(arr, prop, value) {
+			xc_global_ensure(arguments.length > 0, "Missing required argument 'arr', index: 0");
+			xc_global_ensure(arguments.length > 1, "Missing required argument 'prop', index: 1");
+			xc_global_ensure(arguments.length > 2, "Missing required argument 'value', index: 2");
+			xc_global_ensure(Data.isArray(arr), "The argument 'arr' is not an array");
+			xc_global_ensure(Data.isString(prop), "The argument 'prop' is not a string");
+
+			return ObjectArrayUtils.indexOf(arr, prop, value) >= 0;
+		},
+
+		/**
+		 * @description
+		 * <p>
+		 * Inserts a certain "item" into the "arr" (no duplicated value of the item property) and returns it with a new array instance.
+		 * </p>
+		 * 
+		 * @example
+		 * <b>Examples</b>
+		 * 
+		 * Assumes the "o0" is: { id: 0, name: "mary" }
+		 * Assumes the "o1" is: { id: 1, name: "eric" }
+		 * Assumes the "o2" is: { flag: true }
+		 * Assumes the "o3" is: { id: 3, name: "mary" }
+		 * Assumes the "o4" is: { id: 4, name: "jack" }
+		 * Assumes the "arr" is: [o1, o2, o3, o4]
+		 * 
+		 * xeno.common.util.ObjectArrayUtils.insertUnique(arr, "id", o0) = [o1, o2, o3, o4, o0]
+		 * xeno.common.util.ObjectArrayUtils.insertUnique(arr, "id", o0, 1) = [o1, o0, o2, o3, o4]
+		 * xeno.common.util.ObjectArrayUtils.insertUnique(arr, "id", o0, 5) = [o1, o2, o3, o4, o0]
+		 * xeno.common.util.ObjectArrayUtils.insertUnique(arr, "alias", o0) = [o1, o2, o3, o4, o0]
+		 * xeno.common.util.ObjectArrayUtils.insertUnique(arr, "alias", o0, 1) = [o1, o0, o2, o3, o4]
+		 * xeno.common.util.ObjectArrayUtils.insertUnique(arr, "alias", o0, 5) = [o1, o2, o3, o4, o0]
+		 * xeno.common.util.ObjectArrayUtils.insertUnique(arr, "name", o0) = [o1, o2, o4, o0]
+		 * xeno.common.util.ObjectArrayUtils.insertUnique(arr, "name", o0, 1) = [o1, o0, o2, o4]
+		 * xeno.common.util.ObjectArrayUtils.insertUnique(arr, "name", o0, 5) = [o1, o2, o4, o0]
+		 * 
+		 * @param arr
+		 * 			The array to be handled.
+		 * @param prop
+		 * 			The object item property.
+		 * @param item
+		 * 			The item to be inserted into.
+		 * @param index
+		 * 			The position to be inserted at, optional.<br/>
+		 * 			If this value is out of the array's range, the "item" will be inserted at the last position.<br/>
+		 * 			The default value is: Number.MAX_VALUE.
+		 * 
+		 * @return
+		 * 			The array.
+		 */
+		insertUnique: function(arr, prop, item, index) {
+			xc_global_ensure(arguments.length > 0, "Missing required argument 'arr', index: 0");
+			xc_global_ensure(arguments.length > 1, "Missing required argument 'prop', index: 1");
+			xc_global_ensure(arguments.length > 2, "Missing required argument 'item', index: 2");
+			xc_global_ensure(Data.isArray(arr), "The argument 'arr' is not an array");
+			xc_global_ensure(Data.isString(prop), "The argument 'prop' is not a string");
+
+			var fixedIndex = Number.MAX_VALUE;
+
+			if(arguments.length > 3) {
+				xc_global_ensure(NumberUtils.isInt(index), "The argument 'index' is not an integer number");
+				xc_global_ensure(index >= 0, "The argument 'index' is negative");
+
+				fixedIndex = index;
+			}
+
+			var items = arr.filter(function(data) {
+
+				try {
+
+					if(data.hasOwnProperty(prop) && item.hasOwnProperty(prop)) {
+						return data[prop] !== item[prop];
+					}
+
+				} catch(err) {
+					// Does nothing.
+				}
+
+				return true;
+			});
+
+			items.splice(fixedIndex, 0, item);
+
+			return items;
+		},
+
+		/**
+		 * @description
+		 * <p>
+		 * Removes all matched items from the "arr" by its property and value and returns a new array instance.
+		 * </p>
+		 * 
+		 * @example
+		 * <b>Examples</b>
+		 * 
+		 * Assumes the "o1" is: { id: 1, name: "eric" }
+		 * Assumes the "o2" is: { flag: true }
+		 * Assumes the "o3" is: { id: 3, name: "mary" }
+		 * Assumes the "o4" is: { id: 4, name: "jack" }
+		 * Assumes the "o5" is: { id: 5, name: "jack" }
+		 * Assumes the "o6" is: { id: 6, name: "mary" }
+		 * Assumes the "o7" is: { id: 7, name: "tina" }
+		 * Assumes the "o8" is: { }
+		 * Assumes the "o9" is: { id: 9, name: "jeff" }
+		 * Assumes the "arr" is: [o1, null, null, o2, o3, o4, undefined, o5, o6, o7, undefined, o8, o9]
+		 * 
+		 * xeno.common.util.ObjectArrayUtils.remove(arr, "id", 3) = [o1, null, null, o2, o4, undefined, o5, o6, o7, undefined, o8, o9]
+		 * xeno.common.util.ObjectArrayUtils.remove(arr, "id", "3") = [o1, null, null, o2, o3, o4, undefined, o5, o6, o7, undefined, o8, o9]
+		 * xeno.common.util.ObjectArrayUtils.remove(arr, "name", "mary") = [o1, null, null, o2, o4, undefined, o5, o7, undefined, o8, o9]
+		 * 
+		 * @param arr
+		 * 			The array to be handled.
+		 * @param prop
+		 * 			The object item property.
+		 * @param value
+		 * 			The object item value.
+		 * 
+		 * @return
+		 * 			The array.
+		 */
+		remove: function(arr, prop, value) {
+			xc_global_ensure(arguments.length > 0, "Missing required argument 'arr', index: 0");
+			xc_global_ensure(arguments.length > 1, "Missing required argument 'prop', index: 1");
+			xc_global_ensure(arguments.length > 2, "Missing required argument 'value', index: 2");
+			xc_global_ensure(Data.isArray(arr), "The argument 'arr' is not an array");
+			xc_global_ensure(Data.isString(prop), "The argument 'prop' is not a string");
+
+			var items = arr.filter(function(data) {
+
+				try {
+
+					if(data.hasOwnProperty(prop)) {
+						return data[prop] !== value;
+					}
+
+				} catch(err) {
+					// Does nothing.
+				}
+
+				return true;
+			});
+
+			return items;
 		}
 
 	};
