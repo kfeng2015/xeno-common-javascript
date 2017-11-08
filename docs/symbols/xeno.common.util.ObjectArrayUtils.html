@@ -1,0 +1,1066 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="generator" content="JsDoc Toolkit" />
+		
+		<title>JsDoc Reference - xeno.common.util.ObjectArrayUtils</title>
+
+		<style type="text/css">
+			/* default.css */
+body
+{
+	font: 12px "Lucida Grande", Tahoma, Arial, Helvetica, sans-serif;
+	width: 800px;
+}
+
+.header
+{
+	clear: both;
+	background-color: #ccc;
+	padding: 8px;
+}
+
+h1
+{
+	font-size: 150%;
+	font-weight: bold;
+	padding: 0;
+	margin: 1em 0 0 .3em;
+}
+
+hr
+{
+	border: none 0;
+	border-top: 1px solid #7F8FB1;
+	height: 1px;
+}
+
+pre.code
+{
+	display: block;
+	padding: 8px;
+	border: 1px dashed #ccc;
+}
+
+#index
+{
+	margin-top: 24px;
+	float: left;
+	width: 160px;
+	position: absolute;
+	left: 8px;
+	background-color: #F3F3F3;
+	padding: 8px;
+}
+
+#content
+{
+	margin-left: 190px;
+	width: 600px;
+}
+
+.classList
+{
+	list-style-type: none;
+	padding: 0;
+	margin: 0 0 0 8px;
+	font-family: arial, sans-serif;
+	font-size: 1em;
+	overflow: auto;
+}
+
+.classList li
+{
+	padding: 0;
+	margin: 0 0 8px 0;
+}
+
+.summaryTable { width: 100%; }
+
+h1.classTitle
+{
+	font-size:170%;
+	line-height:130%;
+}
+
+h2 { font-size: 110%; }
+caption, div.sectionTitle
+{
+	background-color: #7F8FB1;
+	color: #fff;
+	font-size:130%;
+	text-align: left;
+	padding: 2px 6px 2px 6px;
+	border: 1px #7F8FB1 solid;
+}
+
+div.sectionTitle { margin-bottom: 8px; }
+.summaryTable thead { display: none; }
+
+.summaryTable td
+{
+	vertical-align: top;
+	padding: 4px;
+	border-bottom: 1px #7F8FB1 solid;
+	border-right: 1px #7F8FB1 solid;
+}
+
+/*col#summaryAttributes {}*/
+.summaryTable td.attributes
+{
+	border-left: 1px #7F8FB1 solid;
+	width: 140px;
+	text-align: right;
+}
+
+td.attributes, .fixedFont
+{
+	line-height: 15px;
+	color: #002EBE;
+	font-family: "Courier New",Courier,monospace;
+	font-size: 13px;
+}
+
+.summaryTable td.nameDescription
+{
+	text-align: left;
+	font-size: 13px;
+	line-height: 15px;
+}
+
+.summaryTable td.nameDescription, .description
+{
+	line-height: 15px;
+	padding: 4px;
+	padding-left: 4px;
+}
+
+.summaryTable { margin-bottom: 8px; }
+
+ul.inheritsList
+{
+	list-style: square;
+	margin-left: 20px;
+	padding-left: 0;
+}
+
+.detailList {
+	margin-left: 20px; 
+	line-height: 15px;
+}
+.detailList dt { margin-left: 20px; }
+
+.detailList .heading
+{
+	font-weight: bold;
+	padding-bottom: 6px;
+	margin-left: 0;
+}
+
+.light, td.attributes, .light a:link, .light a:visited
+{
+	color: #777;
+	font-style: italic;
+}
+
+.fineprint
+{
+	text-align: right;
+	font-size: 10px;
+}
+		</style>
+	</head>
+
+	<body>
+<!-- ============================== header ================================= -->	
+		<!-- begin static/header.html -->
+		<div id="header">
+</div>
+		<!-- end static/header.html -->
+
+<!-- ============================== classes index ============================ -->
+		<div id="index">
+			<!-- begin publish.classesIndex -->
+			<div align="center"><a href="../index.html">Class Index</a>
+| <a href="../files.html">File Index</a></div>
+<hr />
+<h2>Classes</h2>
+<ul class="classList">
+	
+	<li><i><a href="../symbols/_global_.html">_global_</a></i></li>
+	
+	<li><a href="../symbols/xeno.common.lang.Data.html">xeno.common.lang.Data</a></li>
+	
+	<li><a href="../symbols/xeno.common.lang.EventDispatcher.html">xeno.common.lang.EventDispatcher</a></li>
+	
+	<li><a href="../symbols/xeno.common.lang.GUID.html">xeno.common.lang.GUID</a></li>
+	
+	<li><a href="../symbols/xeno.common.lang.Paging.html">xeno.common.lang.Paging</a></li>
+	
+	<li><a href="../symbols/xeno.common.lang.Timer.html">xeno.common.lang.Timer</a></li>
+	
+	<li><a href="../symbols/xeno.common.lang.URL.html">xeno.common.lang.URL</a></li>
+	
+	<li><a href="../symbols/xeno.common.text.DateFormat.html">xeno.common.text.DateFormat</a></li>
+	
+	<li><a href="../symbols/xeno.common.text.NumberFormat.html">xeno.common.text.NumberFormat</a></li>
+	
+	<li><a href="../symbols/xeno.common.util.ArrayUtils.html">xeno.common.util.ArrayUtils</a></li>
+	
+	<li><a href="../symbols/xeno.common.util.DateUtils.html">xeno.common.util.DateUtils</a></li>
+	
+	<li><a href="../symbols/xeno.common.util.HtmlStringUtils.html">xeno.common.util.HtmlStringUtils</a></li>
+	
+	<li><a href="../symbols/xeno.common.util.NumberUtils.html">xeno.common.util.NumberUtils</a></li>
+	
+	<li><a href="../symbols/xeno.common.util.ObjectArrayUtils.html">xeno.common.util.ObjectArrayUtils</a></li>
+	
+	<li><a href="../symbols/xeno.common.util.RandomUtils.html">xeno.common.util.RandomUtils</a></li>
+	
+	<li><a href="../symbols/xeno.common.util.StringUtils.html">xeno.common.util.StringUtils</a></li>
+	
+</ul>
+<hr />
+			<!-- end publish.classesIndex -->
+		</div>
+		
+		<div id="content">
+<!-- ============================== class title ============================ -->
+			<h1 class="classTitle">
+				
+				Class xeno.common.util.ObjectArrayUtils
+			</h1>
+
+<!-- ============================== class summary ========================== -->			
+			<p class="description">
+				
+				
+			
+				<p>
+A set of utilities for object array operations.
+</p>
+<p>
+When you use this class for some certain functions which have return values, a new array instance will be created and return.
+The original array passes in will not be edited, but items references in the new array will be the same as their in the original array.
+</p>
+				
+				
+					<br /><i>Defined in: </i> <a href="../symbols/src/D__Jenkins_Repositories_workspace_xeno-common-javascript_code_target_composes_original_source_050_xeno_common_util_ObjectArrayUtils.js.html">ObjectArrayUtils.js</a>.
+				
+			</p>
+
+<!-- ============================== constructor summary ==================== -->			
+			
+			<table class="summaryTable" cellspacing="0" summary="A summary of the constructor documented in the class xeno.common.util.ObjectArrayUtils.">
+				<caption>Class Summary</caption>
+				<thead>
+					<tr>
+						<th scope="col">Constructor Attributes</th>
+						<th scope="col">Constructor Name and Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="attributes">&nbsp;</td>
+						<td class="nameDescription" >
+							<div class="fixedFont">
+								<b><a href="../symbols/xeno.common.util.ObjectArrayUtils.html#constructor">xeno.common.util.ObjectArrayUtils</a></b>()
+							</div>
+							<div class="description"><p>
+The class constructor.</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			
+
+<!-- ============================== properties summary ===================== -->
+			
+
+<!-- ============================== methods summary ======================== -->
+			
+				
+				
+				<table class="summaryTable" cellspacing="0" summary="A summary of the methods documented in the class xeno.common.util.ObjectArrayUtils.">
+					<caption>Method Summary</caption>
+					<thead>
+						<tr>
+							<th scope="col">Method Attributes</th>
+							<th scope="col">Method Name and Description</th>
+						</tr>
+					</thead>
+					<tbody>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">xeno.common.util.ObjectArrayUtils.<b><a href="../symbols/xeno.common.util.ObjectArrayUtils.html#.contains">contains</a></b>(arr, prop, value)
+								</div>
+								<div class="description"><p>
+Checks item exist or not of given array by its item property and value.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">xeno.common.util.ObjectArrayUtils.<b><a href="../symbols/xeno.common.util.ObjectArrayUtils.html#.indexOf">indexOf</a></b>(arr, prop, value, defaultIndex)
+								</div>
+								<div class="description"><p>
+Returns the first index of given array by its item property and value.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">xeno.common.util.ObjectArrayUtils.<b><a href="../symbols/xeno.common.util.ObjectArrayUtils.html#.insertUnique">insertUnique</a></b>(arr, prop, item, index)
+								</div>
+								<div class="description"><p>
+Inserts a certain "item" into the "arr" (no duplicated value of the item property) and returns it with a new array instance.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">xeno.common.util.ObjectArrayUtils.<b><a href="../symbols/xeno.common.util.ObjectArrayUtils.html#.itemOf">itemOf</a></b>(arr, prop, value, defaultItem)
+								</div>
+								<div class="description"><p>
+Returns the first item of given array by its item property and value.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">xeno.common.util.ObjectArrayUtils.<b><a href="../symbols/xeno.common.util.ObjectArrayUtils.html#.lastIndexOf">lastIndexOf</a></b>(arr, prop, value, defaultIndex)
+								</div>
+								<div class="description"><p>
+Returns the last index of given array by its item property and value.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">xeno.common.util.ObjectArrayUtils.<b><a href="../symbols/xeno.common.util.ObjectArrayUtils.html#.lastItemOf">lastItemOf</a></b>(arr, prop, value, defaultItem)
+								</div>
+								<div class="description"><p>
+Returns the last item of given array by its item property and value.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">xeno.common.util.ObjectArrayUtils.<b><a href="../symbols/xeno.common.util.ObjectArrayUtils.html#.remove">remove</a></b>(arr, prop, value)
+								</div>
+								<div class="description"><p>
+Removes all matched items from the "arr" by its property and value and returns a new array instance.</div>
+							</td>
+						</tr>
+					
+					</tbody>
+				</table>
+				
+				
+				
+			
+<!-- ============================== events summary ======================== -->
+			
+
+<!-- ============================== constructor details ==================== -->		
+			
+			<div class="details"><a name="constructor"> </a>
+				<div class="sectionTitle">
+					Class Detail
+				</div>
+				
+				<div class="fixedFont">
+						<b>xeno.common.util.ObjectArrayUtils</b>()
+				</div>
+				
+				<div class="description">
+					<p>
+The class constructor.
+</p>
+					
+				</div>
+				
+				
+				
+				
+					
+					
+					
+					
+					
+					
+					
+
+			</div>
+			
+
+<!-- ============================== field details ========================== -->		
+			
+
+<!-- ============================== method details ========================= -->		
+			
+				<div class="sectionTitle">
+					Method Detail
+				</div>
+				
+					<a name=".contains"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">xeno.common.util.ObjectArrayUtils.</span><b>contains</b>(arr, prop, value)
+					
+					</div>
+					<div class="description">
+						<p>
+Checks item exist or not of given array by its item property and value.
+</p>
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code"><b>Examples</b>
+
+Assumes the "o1" is: { id: 1, name: "eric" }
+Assumes the "o2" is: { flag: true }
+Assumes the "o3" is: { id: 3, name: "mary" }
+Assumes the "o4" is: { id: 4, name: "jack" }
+Assumes the "o5" is: { id: 5, name: "jack" }
+Assumes the "o6" is: { id: 6, name: "mary" }
+Assumes the "o7" is: { id: 7, name: "tina" }
+Assumes the "o8" is: { }
+Assumes the "o9" is: { id: 9, name: "jeff" }
+Assumes the "arr" is: [o1, null, null, o2, o3, o4, undefined, o5, o6, o7, undefined, o8, o9]
+
+xeno.common.util.ObjectArrayUtils.contains(arr, "id", 3) = true
+xeno.common.util.ObjectArrayUtils.contains(arr, "id", 0) = false
+xeno.common.util.ObjectArrayUtils.contains(arr, "id", 7) = true
+xeno.common.util.ObjectArrayUtils.contains(arr, "id", 10) = false
+xeno.common.util.ObjectArrayUtils.contains(arr, "name", "jack") = true
+xeno.common.util.ObjectArrayUtils.contains(arr, "name", "jane") = false</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>arr</b>
+									
+								</dt>
+								<dd>The array to be handled.</dd>
+							
+								<dt>
+									<b>prop</b>
+									
+								</dt>
+								<dd>The object item property.</dd>
+							
+								<dt>
+									<b>value</b>
+									
+								</dt>
+								<dd>The object item value.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>The boolean.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".indexOf"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">xeno.common.util.ObjectArrayUtils.</span><b>indexOf</b>(arr, prop, value, defaultIndex)
+					
+					</div>
+					<div class="description">
+						<p>
+Returns the first index of given array by its item property and value.
+</p>
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code"><b>Examples</b>
+
+Assumes the "o1" is: { id: 1, name: "eric" }
+Assumes the "o2" is: { flag: true }
+Assumes the "o3" is: { id: 3, name: "mary" }
+Assumes the "o4" is: { id: 4, name: "jack" }
+Assumes the "o5" is: { id: 5, name: "jack" }
+Assumes the "o6" is: { id: 6, name: "mary" }
+Assumes the "o7" is: { id: 7, name: "tina" }
+Assumes the "o8" is: { }
+Assumes the "o9" is: { id: 9, name: "jeff" }
+Assumes the "arr" is: [o1, null, null, o2, o3, o4, undefined, o5, o6, o7, undefined, o8, o9]
+
+xeno.common.util.ObjectArrayUtils.indexOf(arr, "id", 3) = 4
+xeno.common.util.ObjectArrayUtils.indexOf(arr, "id", 0) = -1
+xeno.common.util.ObjectArrayUtils.indexOf(arr, "id", 7) = 9
+xeno.common.util.ObjectArrayUtils.indexOf(arr, "id", 10) = -1
+xeno.common.util.ObjectArrayUtils.indexOf(arr, "name", "jack") = 5
+xeno.common.util.ObjectArrayUtils.indexOf(arr, "name", "jane") = -1
+xeno.common.util.ObjectArrayUtils.indexOf(arr, "id", 3, -3) = 4
+xeno.common.util.ObjectArrayUtils.indexOf(arr, "id", 0, -3) = -3
+xeno.common.util.ObjectArrayUtils.indexOf(arr, "id", 7, -3) = 9
+xeno.common.util.ObjectArrayUtils.indexOf(arr, "id", 10, -3) = -3
+xeno.common.util.ObjectArrayUtils.indexOf(arr, "name", "jack", -3) = 5
+xeno.common.util.ObjectArrayUtils.indexOf(arr, "name", "jane", -3) = -3
+xeno.common.util.ObjectArrayUtils.indexOf(arr, "id", 3, 10) = 4
+xeno.common.util.ObjectArrayUtils.indexOf(arr, "id", 0, 10) = 10
+xeno.common.util.ObjectArrayUtils.indexOf(arr, "id", 7, 10) = 9
+xeno.common.util.ObjectArrayUtils.indexOf(arr, "id", 10, 10) = 10
+xeno.common.util.ObjectArrayUtils.indexOf(arr, "name", "jack", 10) = 5
+xeno.common.util.ObjectArrayUtils.indexOf(arr, "name", "jane", 10) = 10</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>arr</b>
+									
+								</dt>
+								<dd>The array to be handled.</dd>
+							
+								<dt>
+									<b>prop</b>
+									
+								</dt>
+								<dd>The object item property.</dd>
+							
+								<dt>
+									<b>value</b>
+									
+								</dt>
+								<dd>The object item value.</dd>
+							
+								<dt>
+									<b>defaultIndex</b>
+									
+								</dt>
+								<dd>The default index to return if the first index does not find, optional.<br/>
+			The default value is: -1.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>The integer.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".insertUnique"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">xeno.common.util.ObjectArrayUtils.</span><b>insertUnique</b>(arr, prop, item, index)
+					
+					</div>
+					<div class="description">
+						<p>
+Inserts a certain "item" into the "arr" (no duplicated value of the item property) and returns it with a new array instance.
+</p>
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code"><b>Examples</b>
+
+Assumes the "o0" is: { id: 0, name: "mary" }
+Assumes the "o1" is: { id: 1, name: "eric" }
+Assumes the "o2" is: { flag: true }
+Assumes the "o3" is: { id: 3, name: "mary" }
+Assumes the "o4" is: { id: 4, name: "jack" }
+Assumes the "arr" is: [o1, o2, o3, o4]
+
+xeno.common.util.ObjectArrayUtils.insertUnique(arr, "id", o0) = [o1, o2, o3, o4, o0]
+xeno.common.util.ObjectArrayUtils.insertUnique(arr, "id", o0, 1) = [o1, o0, o2, o3, o4]
+xeno.common.util.ObjectArrayUtils.insertUnique(arr, "id", o0, 5) = [o1, o2, o3, o4, o0]
+xeno.common.util.ObjectArrayUtils.insertUnique(arr, "alias", o0) = [o1, o2, o3, o4, o0]
+xeno.common.util.ObjectArrayUtils.insertUnique(arr, "alias", o0, 1) = [o1, o0, o2, o3, o4]
+xeno.common.util.ObjectArrayUtils.insertUnique(arr, "alias", o0, 5) = [o1, o2, o3, o4, o0]
+xeno.common.util.ObjectArrayUtils.insertUnique(arr, "name", o0) = [o1, o2, o4, o0]
+xeno.common.util.ObjectArrayUtils.insertUnique(arr, "name", o0, 1) = [o1, o0, o2, o4]
+xeno.common.util.ObjectArrayUtils.insertUnique(arr, "name", o0, 5) = [o1, o2, o4, o0]</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>arr</b>
+									
+								</dt>
+								<dd>The array to be handled.</dd>
+							
+								<dt>
+									<b>prop</b>
+									
+								</dt>
+								<dd>The object item property.</dd>
+							
+								<dt>
+									<b>item</b>
+									
+								</dt>
+								<dd>The item to be inserted into.</dd>
+							
+								<dt>
+									<b>index</b>
+									
+								</dt>
+								<dd>The position to be inserted at, optional.<br/>
+			If this value is out of the array's range, the "item" will be inserted at the last position.<br/>
+			The default value is: Number.MAX_VALUE.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>The array.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".itemOf"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">xeno.common.util.ObjectArrayUtils.</span><b>itemOf</b>(arr, prop, value, defaultItem)
+					
+					</div>
+					<div class="description">
+						<p>
+Returns the first item of given array by its item property and value.
+</p>
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code"><b>Examples</b>
+
+Assumes the "o0" is: { id: 0, name: "mark" }
+Assumes the "o1" is: { id: 1, name: "eric" }
+Assumes the "o2" is: { flag: true }
+Assumes the "o3" is: { id: 3, name: "mary" }
+Assumes the "o4" is: { id: 4, name: "jack" }
+Assumes the "o5" is: { id: 5, name: "jack" }
+Assumes the "o6" is: { id: 6, name: "mary" }
+Assumes the "o7" is: { id: 7, name: "tina" }
+Assumes the "o8" is: { }
+Assumes the "o9" is: { id: 9, name: "jeff" }
+Assumes the "arr" is: [o1, null, null, o2, o3, o4, undefined, o5, o6, o7, undefined, o8, o9]
+
+xeno.common.util.ObjectArrayUtils.itemOf(arr, "id", 3) = o3
+xeno.common.util.ObjectArrayUtils.itemOf(arr, "id", 0) = null
+xeno.common.util.ObjectArrayUtils.itemOf(arr, "id", 7) = o7
+xeno.common.util.ObjectArrayUtils.itemOf(arr, "id", 10) = null
+xeno.common.util.ObjectArrayUtils.itemOf(arr, "name", "jack") = o4
+xeno.common.util.ObjectArrayUtils.itemOf(arr, "name", "jane") = null
+xeno.common.util.ObjectArrayUtils.itemOf(arr, "id", 3, -3) = o3
+xeno.common.util.ObjectArrayUtils.itemOf(arr, "id", 0, -3) = -3
+xeno.common.util.ObjectArrayUtils.itemOf(arr, "id", 7, -3) = o7
+xeno.common.util.ObjectArrayUtils.itemOf(arr, "id", 10, -3) = -3
+xeno.common.util.ObjectArrayUtils.itemOf(arr, "name", "jack", -3) = o4
+xeno.common.util.ObjectArrayUtils.itemOf(arr, "name", "jane", -3) = -3
+xeno.common.util.ObjectArrayUtils.itemOf(arr, "id", 3, o0) = o3
+xeno.common.util.ObjectArrayUtils.itemOf(arr, "id", 0, o0) = o0
+xeno.common.util.ObjectArrayUtils.itemOf(arr, "id", 7, o0) = o7
+xeno.common.util.ObjectArrayUtils.itemOf(arr, "id", 10, o0) = o0
+xeno.common.util.ObjectArrayUtils.itemOf(arr, "name", "jack", o0) = o4
+xeno.common.util.ObjectArrayUtils.itemOf(arr, "name", "jane", o0) = o0</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>arr</b>
+									
+								</dt>
+								<dd>The array to be handled.</dd>
+							
+								<dt>
+									<b>prop</b>
+									
+								</dt>
+								<dd>The object item property.</dd>
+							
+								<dt>
+									<b>value</b>
+									
+								</dt>
+								<dd>The object item value.</dd>
+							
+								<dt>
+									<b>defaultItem</b>
+									
+								</dt>
+								<dd>The default item to return if the first item does not find, optional.<br/>
+			The default value is: null.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>The object.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".lastIndexOf"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">xeno.common.util.ObjectArrayUtils.</span><b>lastIndexOf</b>(arr, prop, value, defaultIndex)
+					
+					</div>
+					<div class="description">
+						<p>
+Returns the last index of given array by its item property and value.
+</p>
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code"><b>Examples</b>
+
+Assumes the "o1" is: { id: 1, name: "eric" }
+Assumes the "o2" is: { flag: true }
+Assumes the "o3" is: { id: 3, name: "mary" }
+Assumes the "o4" is: { id: 4, name: "jack" }
+Assumes the "o5" is: { id: 5, name: "jack" }
+Assumes the "o6" is: { id: 6, name: "mary" }
+Assumes the "o7" is: { id: 7, name: "tina" }
+Assumes the "o8" is: { }
+Assumes the "o9" is: { id: 9, name: "jeff" }
+Assumes the "arr" is: [o1, null, null, o2, o3, o4, undefined, o5, o6, o7, undefined, o8, o9]
+
+xeno.common.util.ObjectArrayUtils.lastIndexOf(arr, "id", 3) = 4
+xeno.common.util.ObjectArrayUtils.lastIndexOf(arr, "id", 0) = -1
+xeno.common.util.ObjectArrayUtils.lastIndexOf(arr, "id", 7) = 9
+xeno.common.util.ObjectArrayUtils.lastIndexOf(arr, "id", 10) = -1
+xeno.common.util.ObjectArrayUtils.lastIndexOf(arr, "name", "jack") = 7
+xeno.common.util.ObjectArrayUtils.lastIndexOf(arr, "name", "jane") = -1
+xeno.common.util.ObjectArrayUtils.lastIndexOf(arr, "id", 3, -3) = 4
+xeno.common.util.ObjectArrayUtils.lastIndexOf(arr, "id", 0, -3) = -3
+xeno.common.util.ObjectArrayUtils.lastIndexOf(arr, "id", 7, -3) = 9
+xeno.common.util.ObjectArrayUtils.lastIndexOf(arr, "id", 10, -3) = -3
+xeno.common.util.ObjectArrayUtils.lastIndexOf(arr, "name", "jack", -3) = 7
+xeno.common.util.ObjectArrayUtils.lastIndexOf(arr, "name", "jane", -3) = -3
+xeno.common.util.ObjectArrayUtils.lastIndexOf(arr, "id", 3, 10) = 4
+xeno.common.util.ObjectArrayUtils.lastIndexOf(arr, "id", 0, 10) = 10
+xeno.common.util.ObjectArrayUtils.lastIndexOf(arr, "id", 7, 10) = 9
+xeno.common.util.ObjectArrayUtils.lastIndexOf(arr, "id", 10, 10) = 10
+xeno.common.util.ObjectArrayUtils.lastIndexOf(arr, "name", "jack", 10) = 7
+xeno.common.util.ObjectArrayUtils.lastIndexOf(arr, "name", "jane", 10) = 10</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>arr</b>
+									
+								</dt>
+								<dd>The array to be handled.</dd>
+							
+								<dt>
+									<b>prop</b>
+									
+								</dt>
+								<dd>The object item property.</dd>
+							
+								<dt>
+									<b>value</b>
+									
+								</dt>
+								<dd>The object item value.</dd>
+							
+								<dt>
+									<b>defaultIndex</b>
+									
+								</dt>
+								<dd>The default index to return if the last index does not find, optional.<br/>
+			The default value is: -1.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>The integer.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".lastItemOf"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">xeno.common.util.ObjectArrayUtils.</span><b>lastItemOf</b>(arr, prop, value, defaultItem)
+					
+					</div>
+					<div class="description">
+						<p>
+Returns the last item of given array by its item property and value.
+</p>
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code"><b>Examples</b>
+
+Assumes the "o0" is: { id: 0, name: "mark" }
+Assumes the "o1" is: { id: 1, name: "eric" }
+Assumes the "o2" is: { flag: true }
+Assumes the "o3" is: { id: 3, name: "mary" }
+Assumes the "o4" is: { id: 4, name: "jack" }
+Assumes the "o5" is: { id: 5, name: "jack" }
+Assumes the "o6" is: { id: 6, name: "mary" }
+Assumes the "o7" is: { id: 7, name: "tina" }
+Assumes the "o8" is: { }
+Assumes the "o9" is: { id: 9, name: "jeff" }
+Assumes the "arr" is: [o1, null, null, o2, o3, o4, undefined, o5, o6, o7, undefined, o8, o9]
+
+xeno.common.util.ObjectArrayUtils.lastItemOf(arr, "id", 3) = o3
+xeno.common.util.ObjectArrayUtils.lastItemOf(arr, "id", 0) = null
+xeno.common.util.ObjectArrayUtils.lastItemOf(arr, "id", 7) = o7
+xeno.common.util.ObjectArrayUtils.lastItemOf(arr, "id", 10) = null
+xeno.common.util.ObjectArrayUtils.lastItemOf(arr, "name", "jack") = o5
+xeno.common.util.ObjectArrayUtils.lastItemOf(arr, "name", "jane") = null
+xeno.common.util.ObjectArrayUtils.lastItemOf(arr, "id", 3, -3) = o3
+xeno.common.util.ObjectArrayUtils.lastItemOf(arr, "id", 0, -3) = -3
+xeno.common.util.ObjectArrayUtils.lastItemOf(arr, "id", 7, -3) = o7
+xeno.common.util.ObjectArrayUtils.lastItemOf(arr, "id", 10, -3) = -3
+xeno.common.util.ObjectArrayUtils.lastItemOf(arr, "name", "jack", -3) = o5
+xeno.common.util.ObjectArrayUtils.lastItemOf(arr, "name", "jane", -3) = -3
+xeno.common.util.ObjectArrayUtils.lastItemOf(arr, "id", 3, o0) = o3
+xeno.common.util.ObjectArrayUtils.lastItemOf(arr, "id", 0, o0) = o0
+xeno.common.util.ObjectArrayUtils.lastItemOf(arr, "id", 7, o0) = o7
+xeno.common.util.ObjectArrayUtils.lastItemOf(arr, "id", 10, o0) = o0
+xeno.common.util.ObjectArrayUtils.lastItemOf(arr, "name", "jack", o0) = o5
+xeno.common.util.ObjectArrayUtils.lastItemOf(arr, "name", "jane", o0) = o0</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>arr</b>
+									
+								</dt>
+								<dd>The array to be handled.</dd>
+							
+								<dt>
+									<b>prop</b>
+									
+								</dt>
+								<dd>The object item property.</dd>
+							
+								<dt>
+									<b>value</b>
+									
+								</dt>
+								<dd>The object item value.</dd>
+							
+								<dt>
+									<b>defaultItem</b>
+									
+								</dt>
+								<dd>The default item to return if the last item does not find, optional.<br/>
+			The default value is: null.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>The object.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".remove"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">xeno.common.util.ObjectArrayUtils.</span><b>remove</b>(arr, prop, value)
+					
+					</div>
+					<div class="description">
+						<p>
+Removes all matched items from the "arr" by its property and value and returns a new array instance.
+</p>
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code"><b>Examples</b>
+
+Assumes the "o1" is: { id: 1, name: "eric" }
+Assumes the "o2" is: { flag: true }
+Assumes the "o3" is: { id: 3, name: "mary" }
+Assumes the "o4" is: { id: 4, name: "jack" }
+Assumes the "o5" is: { id: 5, name: "jack" }
+Assumes the "o6" is: { id: 6, name: "mary" }
+Assumes the "o7" is: { id: 7, name: "tina" }
+Assumes the "o8" is: { }
+Assumes the "o9" is: { id: 9, name: "jeff" }
+Assumes the "arr" is: [o1, null, null, o2, o3, o4, undefined, o5, o6, o7, undefined, o8, o9]
+
+xeno.common.util.ObjectArrayUtils.remove(arr, "id", 3) = [o1, null, null, o2, o4, undefined, o5, o6, o7, undefined, o8, o9]
+xeno.common.util.ObjectArrayUtils.remove(arr, "id", "3") = [o1, null, null, o2, o3, o4, undefined, o5, o6, o7, undefined, o8, o9]
+xeno.common.util.ObjectArrayUtils.remove(arr, "name", "mary") = [o1, null, null, o2, o4, undefined, o5, o7, undefined, o8, o9]</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>arr</b>
+									
+								</dt>
+								<dd>The array to be handled.</dd>
+							
+								<dt>
+									<b>prop</b>
+									
+								</dt>
+								<dd>The object item property.</dd>
+							
+								<dt>
+									<b>value</b>
+									
+								</dt>
+								<dd>The object item value.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>The array.</dd>
+							
+							</dl>
+						
+						
+						
+
+					
+				
+			
+			
+<!-- ============================== event details ========================= -->		
+			
+			
+			<hr />
+		</div>
+
+		
+<!-- ============================== footer ================================= -->
+		<div class="fineprint" style="clear:both">
+			
+			Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.3.2 on Wed Nov 08 2017 16:21:53 GMT+0800 (CST)
+		</div>
+	</body>
+</html>
